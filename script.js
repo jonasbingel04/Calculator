@@ -16,16 +16,16 @@ function divide(x, y){
 }
 function operate(){
     if(operator == "+"){
-        return add(number1, number2);
+        return add(Number(number1), Number(number2));
     }
     else if(operator == "-"){
-        return subtract(number1,number2);
+        return subtract(Number(number1), Number(number2));
     }
     else if(operator == "*"){
-        return multiply(number1,number2);
+        return multiply(Number(number1), Number(number2));
     }
     else if(operator == "/"){
-        return divide(number1,number2);
+        return divide(Number(number1), Number(number2));
     }
     else{
         console.log("Error in funtion operate")
@@ -50,36 +50,11 @@ function populate(isNumber, sign){
             results.textContent = number1 + " " + operator;
         }
         else{
-            switch(operator){
-                case "+":
-                    result = add(Number(number1), Number(number2));
-                    clear();
-                    number1 = result;
-                    operator = sign;
-                    results.textContent = number1 + " " + operator;
-                    break;
-                case "-":
-                    result = subtract(Number(number1), Number(number2));
-                    clear();
-                    number1 = result;
-                    operator = sign;
-                    results.textContent = number1 + " " + operator;
-                    break;
-                case "*":
-                    result = multiply(Number(number1), Number(number2));
-                    clear();
-                    number1 = result;
-                    operator = sign;
-                    results.textContent = number1 + " " + operator;
-                    break;
-                case "/":
-                    result = divide(Number(number1), Number(number2));
-                    clear();
-                    number1 = result;
-                    operator = sign;
-                    results.textContent = number1 + " " + operator;
-                    break;
-            }
+            result = operate()
+            clear();
+            number1 = result;
+            operator = sign;
+            results.textContent = number1 + " " + operator;
         }
     }
 }
@@ -92,35 +67,12 @@ function clear(){
 
 function equal(){
     if(operator){
-        switch(operator){
-            case "+":
-                result = add(Number(number1), Number(number2));
-                clear();
-                number1 = result;
-                results.textContent = number1;
-                break;
-            case "-":
-                result = subtract(Number(number1), Number(number2));
-                clear();
-                number1 = result;
-                results.textContent = number1;
-                break;
-            case "*":
-                result = multiply(Number(number1), Number(number2));
-                clear();
-                number1 = result;
-                results.textContent = number1;
-                break;
-            case "/":
-                result = divide(Number(number1), Number(number2));
-                clear();
-                number1 = result;
-                results.textContent = number1;
-                break;
-        }
+        result = operate()
+            clear();
+            number1 = result;
+            results.textContent = number1;
     }
     else{
-        
     }
 }
 
