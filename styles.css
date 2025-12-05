@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#buttonsContainer{
+    display: flex;
+}
+#operators{
+    display:flex;
+    flex-direction: column;
+}
+#leftBlock{
+    display: flex;
+    flex-wrap: wrap;
+    width: 249px;
+}
+#results{
+    width: 332px;
+    height: 75px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    margin: 5px;
+    border-radius: 37.5px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+button{
+    border: none;
+    color: white;
+    border-radius: 100%;
+    padding:2px;
+    background-color: blue;
+    height: 75px;
+    width: 75px;
+    margin: 4px;
+    font-size: 25px;
+}
+.numbers{
+    background-color: #6495ed;
+}
+.operators, .extra{
+    background-color:   #439DCB;
+}

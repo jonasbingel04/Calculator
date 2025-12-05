@@ -63,6 +63,7 @@ function clear(){
     number1 = "";
     number2 = "";
     operator = "";
+    results.textContent = ""
 }
 
 function equal(){
@@ -75,8 +76,6 @@ function equal(){
     else{
     }
 }
-
-
 
 const numberButtons = document.querySelectorAll(".numbers");
 numberButtons.forEach((button) => {
